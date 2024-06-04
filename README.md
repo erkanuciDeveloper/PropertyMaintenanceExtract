@@ -1,6 +1,4 @@
-# Property PropertyMaintenanceExtract Pipeline
-
-# Property Maintenance ETL
+# Property Maintenance Extract Pipeline
 
 ## Overview
 This project demonstrates an ETL (Extract, Transform, Load) process for property maintenance records using a star schema data model. The data is loaded into a MongoDB database hosted via Docker.
@@ -29,9 +27,9 @@ First, clone the repository and navigate into the project directory:
 ```bash
 git clone <repository-url>
 cd PropertyMaintenanceExtract
+```
 
-
-## Setup Instructions
+### Setup Instructions
 
 1. **Install Docker and Docker Compose**:
    - Follow the official Docker documentation for installation instructions.
@@ -39,18 +37,24 @@ cd PropertyMaintenanceExtract
 2. **Start MongoDB Database**:
    ```bash
    docker-compose up -d
+   ```
 
-3. **python -m venv .venv
-source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
-pip install -r requirements.txt**
+3. **Set Up Python Environment**:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
 
-4. **Run the ETL Pipeline**
-
+4. **Run the ETL Pipeline**:
+   ```bash
    python src/presentation/app/app.py
+   ```
 
-5. **You can see processed data in Mongo Compas Click to apply**
+5. **Verify Processed Data in MongoDB**:
+   - Open MongoDB Compass and apply filters to view processed data.
 
-6. **Stop the MongoDB Container**
-
-  docker-compose down
-
+6. **Stop the MongoDB Container**:
+   ```bash
+   docker-compose down
+   ```
