@@ -12,7 +12,7 @@ def db_client():
     client.close()
 
 def test_etl_process(db_client):
-    csv_path = 'path/to/your/testfile.csv'  # Update with the actual path to your test CSV file
+    csv_path = '/src/infrastructure/data/raw/synthetic_property_data.csv'  
     etl_process = ETLProcess(csv_path, db_client)
 
     # Run the ETL process
